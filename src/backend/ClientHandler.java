@@ -92,11 +92,14 @@ public class ClientHandler {
                     break;
                 }
                 else if (message.startsWith("-pm")){
-                      String[] pm = message.split("\\s");
-                      String nickname = pm[1];
-                      List<String> private_message = new ArrayList<>();
 
-                      for (int i = 2; i < pm.length; i++) {
+                    // private messages
+                    // check
+                    String[] pm = message.split("\\s");
+                    String nickname = pm[1];
+                    List<String> private_message = new ArrayList<>();
+
+                    for (int i = 2; i < pm.length; i++) {
                           private_message.add(pm[i]);
                     }
 
